@@ -21,6 +21,7 @@ class ScJssConfigPlugin implements ConfigPlugin {
     return Object.assign({}, config, {
       sitecoreApiKey: config.sitecoreApiKey || scJssConfig.sitecore?.apiKey,
       sitecoreApiHost: config.sitecoreApiHost || scJssConfig.sitecore?.layoutServiceHost,
+      rootItemId: config.rootItemId || scJssConfig.sitecore?.rootItemId,
     });
   }
 }

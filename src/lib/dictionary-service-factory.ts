@@ -27,6 +27,7 @@ export class DictionaryServiceFactory {
             Otherwise, if your Sitecore instance only has 1 JSS App (i.e. in a Sitecore XP setup), you can specify the root item ID here.
             rootItemId: '{GUID}'
           */
+          rootItemId: config.rootItemId,
         })
       : new RestDictionaryService({
           apiHost: config.sitecoreApiHost,

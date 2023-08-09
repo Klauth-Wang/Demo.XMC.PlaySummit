@@ -1,11 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import {
-  Placeholder,
-  LayoutServiceData,
-  Field,
-  HTMLLink,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+import { Placeholder, LayoutServiceData, Field, HTMLLink } from '@sitecore-jss/sitecore-jss-nextjs';
 import { getPublicUrl } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 import Navigation from 'src/Navigation';
 import Scripts from 'src/Scripts';
@@ -35,21 +30,14 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
       <Head>
         <title>{fields.pageTitle.value.toString() || 'Page'}</title>
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
-        {headLinks.map(headLink => (
+        {headLinks.map((headLink) => (
           <link rel={headLink.rel} key={headLink.href} href={headLink.href} />
         ))}
       </Head>
 
       <Navigation />
       {/* root placeholder for the app, which we add components to using route data */}
-      <div className="container">
-        {route && (
-          <Placeholder
-            name="jss-main"
-            rendering={route}
-          />
-        )}
-      </div>
+      <div className="container">{route && <Placeholder name="jss-main" rendering={route} />}</div>
     </>
   );
 };

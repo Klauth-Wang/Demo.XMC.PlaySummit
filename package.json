@@ -4,7 +4,7 @@
   "version": "21.2.1",
   "private": true,
   "config": {
-    "appName": "multisite",
+    "appName": "playwebsite",
     "rootPlaceholders": [
       "jss-main"
     ],
